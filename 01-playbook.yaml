@@ -1,0 +1,5 @@
+- name: "ping the server"
+  hosts: forntend 
+  tasks: 
+   - name: "ping"
+     ansible.builtin.ping:
