@@ -5,4 +5,4 @@
   tasks:
     - name: print the details
       ansible.builtin.debug:
-        msg: "This is {{ Name }}, from {{ Country }} data from {{ Source from }}."
+        msg: "This is {{ Name }}, from {{ Country }}."
