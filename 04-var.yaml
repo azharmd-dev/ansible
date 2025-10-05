@@ -5,5 +5,7 @@
     Country: India
   tasks:
     - name: print the details
+      vars:
+        Name: Azharuddin Mohammmad #inheritance here preference will be given
       ansible.builtin.debug:
         msg: "This is {{ Name }}, from {{ Country }}."
