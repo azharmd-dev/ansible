@@ -1,0 +1,6 @@
+- name: variables from arugs
+  hosts: local
+  tasks:
+  - name: print the course info
+    ansible.builtin.debug:
+      msg: "This is {{ Name }} from {{ Country }}."
