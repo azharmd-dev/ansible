@@ -6,3 +6,11 @@
       msg: "This is {{ Name }} from {{ Country }}."
 
 # ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=XXX -e "Name=Azhar" -e "Country=India" 08-vars_arugs.yaml
+
+### VARIABLES PREFERENCES ####
+# 1. args or command line
+# 2. from task
+# 3. files
+# 4. prompt
+# 5. play level
+# 6. inventory
