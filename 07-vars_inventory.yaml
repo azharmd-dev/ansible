@@ -1,0 +1,7 @@
+- name: variables from inventory
+  hosts: local
+  tasks:
+    - name: print the details
+      ansible.builtin.debug:
+        msg: "This is {{ Name }} from {{ Country }}."
+        
