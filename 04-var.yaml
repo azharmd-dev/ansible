@@ -6,6 +6,6 @@
   tasks:
     - name: print the details
       vars:
-        Name: Azharuddin Mohammmad #inheritance here preference will be given
+        Name: Azharuddin Mohammmad #inheritance here preference will be given to task level vars
       ansible.builtin.debug:
         msg: "This is {{ Name }}, from {{ Country }}."
