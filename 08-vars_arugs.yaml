@@ -4,3 +4,5 @@
   - name: print the course info
     ansible.builtin.debug:
       msg: "This is {{ Name }} from {{ Country }}."
+
+# ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=XXX -e "Name=Azhar" -e "Country=India" 08-vars_arugs.yaml
