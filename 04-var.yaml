@@ -1,0 +1,9 @@
+- name: play level variables
+  hosts: local
+  vars:
+    Name: Azhar
+    Country: India
+  tasks:
+    - name: print the details
+      ansible.builtin.debug:
+        msg: "This is {{ Name }}, from {{ Country }}."
