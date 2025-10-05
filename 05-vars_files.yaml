@@ -1,0 +1,8 @@
+- name: variables from files
+  hosts: local
+  vars:
+  - details.yaml
+  tasks:
+    - name: print the details
+      ansible.builtin.debug:
+        msg: "This is {{ Name }}, from {{ Country }}."
