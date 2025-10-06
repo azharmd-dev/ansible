@@ -3,6 +3,10 @@
   connection: local
   vars:
     technologies: Shell, Ansible, Git, Terraform
+    user_details:
+      Azhar: Hyderabad
+      Rahul: Chennai
+      Vijay: Delhi
   tasks:
   - name: default variables
     ansible.builtin.debug:
@@ -11,7 +15,10 @@
   - name: convert string to list
     ansible.builtin.debug: 
      msg: "{{ technologies | split(',')}}"
-      
+  
+  - name: dictionary into a list
+    ansible.builtin.debug:
+      msg: "{{ user_details | dict2items }}"
     
       
 
