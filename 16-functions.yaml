@@ -4,4 +4,4 @@
   tasks:
   - name: default variables
     ansible.builtin.debug:
-      msg: "Hello, {{ name | default('Rahul')}}"
+      msg: "Hello, {{ name | default('Rahul')}}" #It will print the Rahul using default variable if the name variable is not mentioned
