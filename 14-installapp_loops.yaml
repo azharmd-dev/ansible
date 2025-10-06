@@ -3,7 +3,7 @@
   connection: local
   become: yes
   tasks:
-  - name: installing application "{{ item }}"
+  - name: installing application # nginx mysql zip
     ansible.builtin.package:
       name: "{{ item }}"
       state: latest
