@@ -30,6 +30,7 @@
     ansible.builtin.debug:
       msg: "{{ user_detail | items2dict }}"
 
+# Reading yaml file and converting into a json file
   - name: Read yaml file and take it into variable
     ansible.builtin.set_fact:
       user_yaml: "{{ lookup('file', './userdetails.yaml') | from_yaml }}"
