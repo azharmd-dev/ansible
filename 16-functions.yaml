@@ -30,3 +30,13 @@
     ansible.builtin.debug:
       msg: "{{ user_detail | items2dict }}"
 
+  - name: Read yaml file and take it into variable
+    ansible.builtin.set_fact:
+      user_yaml: "{{ lookup('file', userdetails.yaml) | from_yaml }}"
+  - name: convert yaml into json
+    ansible.builtin.debug:
+      msg: "json:: {{ user_yaml | to_nice_json }}
+  - name: copying converted content into a file
+    ansible.builtin.copy:
+      src: /path/to/local/file.conf
+      dest: ./userdetails.json
