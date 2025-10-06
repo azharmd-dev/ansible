@@ -13,6 +13,10 @@
        value: Hyderabad
      - key: Rahul
        value: Chennai
+
+    name: Azharuddin Mohammad
+    email: Support@GMAIL.COM
+
   tasks:
   - name: default variables
     ansible.builtin.debug:
@@ -41,3 +45,8 @@
     ansible.builtin.copy:
       dest: ./userdetails.json
       content: "{{ user_yaml | to_nice_json }}"
+
+# converting to upper or lower case
+  - name: converting to uppper case
+    ansible.builtin.debug:
+      msg: "{{ name | upper }}"
