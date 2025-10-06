@@ -9,8 +9,8 @@
       msg: "Hello, {{ name | default('Rahul')}}" #It will print the Rahul using default variable if the name variable is not mentioned
 
   - name: convert string to list
-    ansible.builtin.split: 
-     output: "{{ technologies | split(',') }}"
+    ansible.builtin.debug: 
+     msg: "{{ technologies | split(',')}}"
       
     
       
