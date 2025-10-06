@@ -39,3 +39,4 @@
   - name: copying converted content into a file
     ansible.builtin.copy:
       dest: ./userdetails.json
+      content: "{{ user_yaml | to_nice_json }}"
