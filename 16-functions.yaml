@@ -7,6 +7,12 @@
       Azhar: Hyderabad
       Rahul: Chennai
       Vijay: Delhi
+    
+    user_detail:
+     - key: Azhar
+       value: Hyderabad
+     - key: Rahul
+       value: Chennai
   tasks:
   - name: default variables
     ansible.builtin.debug:
@@ -20,5 +26,7 @@
     ansible.builtin.debug:
       msg: "{{ user_details | dict2items }}"
     
-      
+  - name: list into a dictionary
+    ansible.builtin.debug:
+      msg: "{{ user_detail | items2dict }}"
 
