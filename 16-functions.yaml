@@ -35,7 +35,7 @@
       user_yaml: "{{ lookup('file', userdetails.yaml) | from_yaml }}"
   - name: convert yaml into json
     ansible.builtin.debug:
-      msg: "json:: {{ user_yaml | to_nice_json }}
+      msg: "json:: {{ user_yaml | to_nice_json }}"
   - name: copying converted content into a file
     ansible.builtin.copy:
       dest: ./userdetails.json
