@@ -2,13 +2,13 @@
   hosts: local
   connection: local
   vars:
-    technologies: Shell, Ansible, Git, Terraform
-    user_details:
+    technologies: Shell, Ansible, Git, Terraform #string data
+    user_details: # dictionary data
       Azhar: Hyderabad
       Rahul: Chennai
       Vijay: Delhi
     
-    user_detail:
+    user_detail: # list data
      - key: Azhar
        value: Hyderabad
      - key: Rahul
