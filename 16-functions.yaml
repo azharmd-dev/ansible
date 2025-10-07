@@ -17,7 +17,8 @@
     name: Azharuddin Mohammad
     email: Support@GMAIL.COM
 
-    ipaddress: 192.168.0.1
+    ipaddress: 192.168.0.1 #Valid IP
+    invalidip: 267.20.5.60 #Invalid IP
 
   tasks:
   - name: default variables
@@ -61,3 +62,7 @@
   - name: check valid ip or not
     ansible.builtin.debug:
       msg: "{{ ipaddress | ansible.utils.ipv4 }}"
+
+  - name: check valid ip or not
+    ansible.builtin.debug:
+      msg: "{{ invalidip | ansible.utils.ipv4 }}"
