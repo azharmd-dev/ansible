@@ -1,0 +1,9 @@
+- name: user creation
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+    - name: check user exit or not
+      ansible.builtin.commond: id azhar
+      register: user_output
+      
