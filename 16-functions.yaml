@@ -66,3 +66,11 @@
   - name: check valid ip or not
     ansible.builtin.debug:
       msg: "{{ invalidip | ansible.utils.ipv4 }}"
+
+  - name: redirect the output
+    ansible.builtin.shell: ls -ltr >/tmp/output
+    register: redirected_output
+
+  - name: print the redirected output
+    ansible.builtin.debug:
+      msg: "{{ redirected_output }}" 
