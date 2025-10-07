@@ -17,6 +17,8 @@
     name: Azharuddin Mohammad
     email: Support@GMAIL.COM
 
+    ipaddress: 192.168.0.1
+
   tasks:
   - name: default variables
     ansible.builtin.debug:
@@ -54,3 +56,8 @@
   - name: converting to lower case
     ansible.builtin.debug:
       msg: "{{ email | lower }}"
+
+#To check valid ip or not
+  - name: check valid ip or not
+    ansible.builtin.debug:
+      msg: "{{ ipaddress | ansible.utils.ipv4 }}"
